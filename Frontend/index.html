@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Encurtador de Links</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Encurte seu <span class="highlight">Link</span></h1>
+        <p class="subtitle">Transforme URLs longas em links curtos e compartilháveis</p>
+
+        <div class="shortener-box">
+            <div class="input-group">
+                <input type="url" id="urlInput" placeholder="Cole seu link aqui..." required>
+                <button class="btn-shorten" id="shortenBtn" onclick="shortenUrl()">Encurtar</button>
+            </div>
+
+            <div class="result-box" id="resultBox">
+                <div class="shortened-url" id="shortenedUrl"></div>
+                <button class="btn-copy" onclick="copyToClipboard()">Copiar Link</button>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+    </div>
+
+    <script src="sript.js"></script>
+</body>
+
+</html>
