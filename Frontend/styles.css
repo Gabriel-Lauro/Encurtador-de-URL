@@ -66,6 +66,7 @@ input[type="url"] {
     outline: none;
     background-color: var(--color-white);
     color: var(--color-black);
+    text-align: center;
 }
 
 input[type="url"]:focus {
@@ -101,24 +102,24 @@ input[type="url"]::placeholder {
 }
 
 .result-box {
-    display: none;
     background-color: var(--color-white);
     border: 2px solid var(--color-blue);
     border-radius: 12px;
-    padding: 1.25rem;
+    padding: 1.25rem 1.5rem;
     margin-top: 1.5rem;
-}
-
-.result-box.show {
-    display: block;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 
 .shortened-url {
     font-size: 1.1rem;
     color: var(--color-blue);
     font-weight: 600;
-    margin-bottom: 1rem;
     word-break: break-all;
+    text-align: center;
+    flex: 1;
 }
 
 .btn-copy {
@@ -130,26 +131,23 @@ input[type="url"]::placeholder {
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: filter 0.2s;
+    white-space: nowrap;
+    align-self: flex-start;
 }
 
 .btn-copy:hover {
-    background-color: var(--color-black);
     filter: brightness(1.3);
 }
 
 .error-message {
-    display: none;
     background-color: #ffebee;
     border: 2px solid #ef5350;
     border-radius: 12px;
     padding: 1rem;
     margin-top: 1rem;
     color: #c62828;
-}
-
-.error-message.show {
-    display: block;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -164,4 +162,28 @@ input[type="url"]::placeholder {
     .shortener-box {
         padding: 1.5rem;
     }
+
+    .result-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .shortened-url {
+        text-align: center;
+    }
+
+    .btn-copy {
+        align-self: center;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
